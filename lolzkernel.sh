@@ -28,7 +28,7 @@ git clone https://github.com/Jprimero15/lolz_kernel_redmi8 -b v14_upstream --dep
 
 git clone https://github.com/Jprimero15/lolz-clang -b main --depth=1 $LOLZ_DIR/lolz/clang14
 
-ls $LOLZ_DIR/builder && cd $LOLZ_DIR/lolz && bash $LOLZ_DIR/builder/lolzbuilder.sh
+cd $LOLZ_DIR/lolz && bash $LOLZ_DIR/builder/lolzbuilder.sh
 
 # Send a notificaton to TG
 tg_post_msg "<b>LOLZ KERNEL Compilation Completed</b>"
