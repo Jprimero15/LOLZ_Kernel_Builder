@@ -1,0 +1,17 @@
+--- 
+kind: pipeline
+name: LolzBuilder
+steps: 
+  - 
+    commands:
+      - "bash lolzkernel.sh"
+    environment: 
+      GITHUB_TOKEN: 
+        from_secret: github_token
+      TG_BOT_TOKEN: 
+        from_secret: tg_bot_token
+    image: "panchajanya1999/archlinux:latest"
+    name: LOLZ_Builder
+    trigger: 
+      branch: 
+        - master
