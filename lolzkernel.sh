@@ -20,7 +20,7 @@ function tg_post_msg() {
 }
 
 # Send a notificaton to TG
-tg_post_msg "<b>LOLZ KERNEL Compilation Started</b>"
+tg_post_msg "<b>LOLZ KERNEL Compilation Started (BUILT-IN WLAN)</b>"
 
 git clone https://Jprimero15:$GITHUB_TOKEN@github.com/Jprimero15/lolzbuilder -b master $LOLZ_DIR/builder 
 
@@ -31,4 +31,6 @@ git clone https://github.com/Jprimero15/lolz-clang -b main --depth=1 $LOLZ_DIR/l
 cd $LOLZ_DIR/lolz && bash $LOLZ_DIR/builder/lolzbuilder.sh
 
 # Send a notificaton to TG
-tg_post_msg "<b>LOLZ KERNEL Compilation Completed</b>"
+tg_post_msg "<b>LOLZ KERNEL Compilation Completed (BUILT-IN WLAN)</b>"
+
+# End of Script
