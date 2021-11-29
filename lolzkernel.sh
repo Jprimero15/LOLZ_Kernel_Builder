@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+export DEBIAN_FRONTEND=noninteractive
+
+LOLZ_DIR="$(pwd)"
+
+# Github info
+git config --global user.name "Jprimero15"
+git config --global user.email "jprimero155@gmail.com"
+
+# Inlined function to post a message
+export BOT_MSG_URL="https://api.telegram.org/bot$TG_BOT_TOKEN/sendMessage"
+function tg_post_msg() {
+    curl -s -X POST "$BOT_MSG_URL" -d chat_id="$TG_CHATID" \
+        -d "disable_web_page_preview=true" \
+        -d "parse_mode=html" \
+        -d text="$1"
+}
+
+# Send a notificaton to TG
+tg_post_msg "<b>LOLZ KERNEL Compilation Started</b>"
+
+git clone https://github.com/Jprimero15/lolz-clang -b main --depth=1 $LOLZ_DIR/clang14
+
+git clone https://Jprimero15:$GITHUB_TOKEN@github.com/Jprimero15/lolzbuilder -b ci $LOLZ_DIR/builder
+
+git clone https://github.com/Jprimero15/lolz_kernel_redmi8 -b v14_upstream --depth=1 $LOLZ_DIR/lolz && cd  $LOLZ_DIR/lolz && ./$LOLZ_DIR/builder/build_lolz_orig.sh
+
+# Send a notificaton to TG
+tg_post_msg "<b>LOLZ KERNEL Compilation Completed</b>"
