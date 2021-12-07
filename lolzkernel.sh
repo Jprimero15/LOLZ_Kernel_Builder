@@ -26,7 +26,9 @@ git clone https://Jprimero15:$GITHUB_TOKEN@github.com/Jprimero15/lolzbuilder -b 
 
 git clone https://github.com/Jprimero15/lolz_kernel_redmi8 -b v14_binder --depth=1 $LOLZ_DIR/lolz
 
-git clone https://github.com/kdrag0n/proton-clang -b master --depth=1 $LOLZ_DIR/lolz/clang14
+git clone https://gitlab.com/Panchajanya1999/azure-clang -b main --depth=1 $LOLZ_DIR/lolz/clang14
+
+cd $LOLZ_DIR/lolz/clang14 && git reset --hard 3f4967da0babd918b2258541bbb7fc7fa8be5af8 && $LOLZ_DIR
 
 cd $LOLZ_DIR/lolz && bash $LOLZ_DIR/builder/lolzbuilder.sh
 
