@@ -28,7 +28,7 @@ git clone https://github.com/Jprimero15/lolz_kernel_redmi8 -b v14_binder --depth
 
 git clone https://gitlab.com/Panchajanya1999/azure-clang -b main $LOLZ_DIR/lolz/clang14
 
-cd $LOLZ_DIR/lolz/clang14 && git reset --hard 3f4967da0babd918b2258541bbb7fc7fa8be5af8 && $LOLZ_DIR
+cd $LOLZ_DIR/lolz/clang14 && git reset --hard 3f4967da0babd918b2258541bbb7fc7fa8be5af8
 
 cd $LOLZ_DIR/lolz && bash $LOLZ_DIR/builder/lolzbuilder.sh
 
