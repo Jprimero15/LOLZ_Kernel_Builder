@@ -33,4 +33,7 @@ cd $LOLZ_DIR/lolz && bash $LOLZ_DIR/builder/lolzbuilder.sh
 # Send a notificaton to TG
 tg_post_msg "<b>LOLZ KERNEL Compilation Completed (BUILT-IN WLAN)</b>"
 
+#upload to telegram
+curl -F "document=@$LOLZ_DIR/lolz/out/.config" --form-string "caption=*Just Ignore this file*" "https://api.telegram.org/bot$TG_BOT_TOKEN/sendDocument?chat_id=-1001366235952&parse_mode=MarkdownV2"
+
 # End of Script
