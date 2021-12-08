@@ -5,10 +5,7 @@ steps:
   - 
     commands:
       - export DEBIAN_FRONTEND=noninteractive
-      - DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata
-      - ln -sf  /usr/share/zoneinfo/Asiab/Kolkata /etc/localtime
-      - apt-get install -y tzdata
-      - dpkg-reconfigure --frontend noninteractive tzdata
+      - sudo apt update -y && sudo apt install git aria2 curl wget rsync zip unzip lzma cpio ccache neofetch -y 
       - "bash lolzkernel.sh"
     environment: 
       GITHUB_TOKEN: 
