@@ -4,15 +4,13 @@ name: LolzBuilder
 steps: 
   - 
     commands:
-      - export DEBIAN_FRONTEND=noninteractive
-      - sudo apt update -y && sudo apt install git aria2 curl wget rsync zip unzip lzma cpio ccache neofetch -y 
       - "bash lolzkernel.sh"
     environment: 
       GITHUB_TOKEN: 
         from_secret: github_token
       TG_BOT_TOKEN: 
         from_secret: tg_bot_token
-    image: "ubuntu:21.10"
+    image: "panchajanya1999/archlinux:latest"
     name: LOLZ_Builder
     trigger: 
       branch: 
