@@ -29,7 +29,8 @@ git clone https://github.com/Jprimero15/lolz_kernel_redmi8 -b v14_binder --depth
 #git clone https://github.com/kdrag0n/proton-clang -b master --depth=1 $LOLZ_DIR/lolz/clang14
 
 git clone https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9 -b android-12.0.0_r16 --depth=1 $LOLZ_DIR/lolz/arm-gcc
-git clone https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9 b android-12.0.0_r16 --depth=1 $LOLZ_DIR/lolz/arm64-gcc
+
+git clone https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9 -b android-12.0.0_r16 --depth=1 $LOLZ_DIR/lolz/arm64-gcc
 
 mkdir -p $LOLZ_DIR/lolz/clang14
 cd $LOLZ_DIR/lolz/clang14
