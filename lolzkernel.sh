@@ -6,6 +6,8 @@ export DEBIAN_FRONTEND=noninteractive
 
 LOLZ_DIR="$(pwd)"
 
+sudo apt update -y && sudo apt install git aria2 curl wget rsync zip unzip lzma cpio ccache neofetch -y
+
 # Github info
 git config --global user.name "Jprimero15"
 git config --global user.email "jprimero155@gmail.com"
