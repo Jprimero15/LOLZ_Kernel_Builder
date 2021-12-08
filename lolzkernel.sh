@@ -28,7 +28,7 @@ git clone https://Jprimero15:$GITHUB_TOKEN@github.com/Jprimero15/lolzbuilder -b 
 
 git clone https://github.com/Jprimero15/lolz_kernel_redmi8 -b v14_binder --depth=1 $LOLZ_DIR/lolz
 
-git clone https://github.com/Neutron-Clang/neutron-toolchain -b Neutron-14 $LOLZ_DIR/lolz/clang14
+git clone https://github.com/kdrag0n/proton-clang -b master --depth=1 $LOLZ_DIR/lolz/clang14
 
 cd $LOLZ_DIR/lolz && bash $LOLZ_DIR/builder/lolzbuilder.sh
 
