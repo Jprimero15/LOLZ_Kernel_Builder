@@ -20,13 +20,13 @@ function tg_post_msg() {
 }
 
 # Send a notificaton to TG
-tg_post_msg "<b>LOLZ KERNEL Compilation Started&#33 
-</b>
-<b>Some Informations about Build Types:</b>
+tg_post_msg " <b>LOLZ KERNEL Compilation Started. </b>
+       
+<b>Some Informations about Build Types: </b>
 <b>BUILT-IN WLAN: <code>This is for Android 10,11 and 12 AOSP Based Custom ROMs, e.g. CrDroid.</code></b>
-<b>MODULE_WLAN: <code>This is for Android 10 MIUI Based ROMs and GSI. 
-</code></b>
-<b>For more questions just message on this group and mention Jprimero15 (DO NOT DIRECT MESSAGE HIM)</b>"
+<b>MODULE_WLAN: <code>This is for Android 10 MIUI Based ROMs and GSI. </code></b>
+
+<b>For more questions just message on this group and mention Jprimero15 (DO NOT DIRECT MESSAGE HIM)</b> "
 
 git clone https://Jprimero15:$GITHUB_TOKEN@github.com/Jprimero15/lolzbuilder -b master $LOLZ_DIR/builder 
 
