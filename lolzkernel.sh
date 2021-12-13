@@ -20,20 +20,27 @@ function tg_post_msg() {
 }
 
 # Send a notificaton to TG
-tg_post_msg "<b>LOLZ KERNEL Compilation Started (BUILT-IN WLAN)</b>"
+tg_post_msg "<b>LOLZ KERNEL Compilation Started&#33 
+</b>
+<b>Some Informations about Build Types:</b>
+<b>BUILT-IN WLAN: <code>This is for Android 10,11 and 12 AOSP Based Custom ROMs, e.g. CrDroid.</code></b>
+<b>MODULE_WLAN: <code>This is for Android 10 MIUI Based ROMs and GSI. 
+</code></b>
+<b>For more questions just message on this group and mention Jprimero15 (DO NOT DIRECT MESSAGE HIM)</b>"
 
 git clone https://Jprimero15:$GITHUB_TOKEN@github.com/Jprimero15/lolzbuilder -b master $LOLZ_DIR/builder 
 
-git clone https://github.com/Jprimero15/lolz_kernel_redmi8 -b v14_up --depth=1 $LOLZ_DIR/lolz
+git clone https://github.com/Jprimero15/lolz_kernel_redmi8 -b v14_up $LOLZ_DIR/lolz
 
 git clone https://github.com/Jprimero15/lolz-clang -b main --depth=1 $LOLZ_DIR/lolz/clang14
 
+# for AOSP based Script
 cd $LOLZ_DIR/lolz && bash $LOLZ_DIR/builder/lolzbuilder.sh
 
-#upload to telegram
-curl -F "document=@$LOLZ_DIR/lolz/out/.config" --form-string "caption=*Just Ignore this file*" "https://api.telegram.org/bot$TG_BOT_TOKEN/sendDocument?chat_id=-1001366235952&parse_mode=MarkdownV2"
+# for MIUI based Script
+cd $LOLZ_DIR/lolz && bash $LOLZ_DIR/builder/lolzbuilder_miui.sh
 
 # Send a notificaton to TG
-tg_post_msg "<b>LOLZ KERNEL Compilation Completed (BUILT-IN WLAN)</b>"
+tg_post_msg "<b>LOLZ KERNEL Compilation Completed</b>"
 
 # End of Script
