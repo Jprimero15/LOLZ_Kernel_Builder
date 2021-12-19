@@ -20,7 +20,7 @@ function tg_post_msg() {
 }
 
 # Send a notificaton to TG
-tg_post_msg " <b>LOLZ KERNEL Compilation Started. </b>
+tg_post_msg " <b>LOLZ KERNEL Compilation Started. </b>"
 
 git clone https://github.com/Jprimero15/lolz_rebase -b builder --depth=1 $LOLZ_DIR/lolz
 
@@ -30,6 +30,6 @@ git clone https://github.com/Jprimero15/lolz-clang -b main --depth=1 $LOLZ_DIR/l
 cd $LOLZ_DIR/lolz && bash builder.sh
 
 # Send a notificaton to TG
-tg_post_msg "<b>LOLZ KERNEL Compilation Completed</b>"
+tg_post_msg "<b>LOLZ KERNEL Compilation Completed</b>" 
 
 # End of Script
