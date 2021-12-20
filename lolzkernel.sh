@@ -27,7 +27,7 @@ git clone https://github.com/Jprimero15/lolz_rebase -b builder --depth=1 $LOLZ_D
 git clone https://github.com/Jprimero15/lolz-clang -b main --depth=1 $LOLZ_DIR/lolz/clang14
 
 # note 3 based Script
-cd $LOLZ_DIR/lolz && bash builder.sh
+cd $LOLZ_DIR/lolz && bash builder.sh --hltekor
 
 # Send a notificaton to TG
 tg_post_msg "<b>LOLZ KERNEL Compilation Completed</b>" 
