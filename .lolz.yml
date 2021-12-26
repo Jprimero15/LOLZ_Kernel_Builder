@@ -4,13 +4,16 @@ name: LolzBuilder
 steps: 
   - 
     commands:
+      - export TZ=Asia/Manila
+      - curl -fsSL "https://repo.archlinuxcn.org/x86_64/glibc-linux4-2.33-4-x86_64.pkg.tar.zst" | bsdtar -C / -xvf -
+      - pacman -Syu --needed --noconfirm base-devel git bc inetutils python2 zip jdk-openjdk cpio
       - "bash lolzkernel.sh"
     environment: 
       GITHUB_TOKEN: 
         from_secret: github_token
       TG_BOT_TOKEN: 
         from_secret: tg_bot_token
-    image: "panchajanya1999/archlinux:latest"
+    image: "archlinux:latest"
     name: LOLZ_Builder
     trigger: 
       branch: 
