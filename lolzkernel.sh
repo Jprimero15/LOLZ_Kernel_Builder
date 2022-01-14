@@ -37,8 +37,8 @@ git clone https://github.com/Jprimero15/lolz_kernel_redmi8 -b v15_caf --depth=1 
 # for AOSP based Script
 cd $LOLZ_DIR/lolz && bash $LOLZ_DIR/builder/lolzbuilder.sh
 
-# for MIUI based Script build later
-# cd $LOLZ_DIR/lolz && bash $LOLZ_DIR/builder/lolzbuilder_miui.sh
+# for MIUI based Script
+cd $LOLZ_DIR/lolz && bash $LOLZ_DIR/builder/lolzbuilder_miui.sh
 
 # Send a notificaton to TG
 tg_post_msg "<b>LOLZ KERNEL Compilation Completed</b>"
