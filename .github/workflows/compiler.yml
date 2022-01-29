@@ -1,0 +1,24 @@
+name: Building new Clang
+on:
+  push:
+    branches:
+      - clangbuilder
+
+env:
+  GITHUB_TOKEN: ${{ secrets.TOKEN_GITHUB }}
+  TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    container:
+      image: ubuntu:latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build LOLZ Clang
+      run: |
+        export DEBIAN_FRONTEND=noninteractive
+        export PATH=/usr/bin/core_perl:$PATH
+        bash lolzkernelwf.sh
