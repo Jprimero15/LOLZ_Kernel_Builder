@@ -12,7 +12,7 @@ steps:
         from_secret: tg_bot_token
       TG_CHATID: 
         from_secret: tg_chatid
-    image: "panchajanya1999/archlinux:latest"
+    image: "zycromerz/kerneldocker:v3"
     name: LOLZ_Builder
     trigger: 
       branch: 
