@@ -35,7 +35,7 @@ git clone https://github.com/Jprimero15/lolz_kernel_redmi8 -b v16_test --depth=1
 #git clone https://github.com/Jprimero15/lolz-clang -b main --depth=1 $LOLZ_DIR/lolz/clang14
 
 # for AOSP based Script
-cd $LOLZ_DIR/lolz && bash $LOLZ_DIR/builder/unify_lolzbuilder.sh aosnwowajsiwjwoeudu
+cd $LOLZ_DIR/lolz && bash $LOLZ_DIR/builder/unify_lolzbuilder.sh aosnwowajsiwjwoeudu testboi
 
 # for MIUI based Script
 cd $LOLZ_DIR/lolz && bash $LOLZ_DIR/builder/unify_lolzbuilder.sh miui
