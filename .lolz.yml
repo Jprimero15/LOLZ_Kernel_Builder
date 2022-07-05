@@ -9,6 +9,8 @@ steps:
     environment: 
       GITHUB_TOKEN: 
         from_secret: github_token
+      GITLAB_TOKEN:
+        from_secret: gitlab_token
       TG_BOT_TOKEN: 
         from_secret: tg_bot_token
     image: "ubuntu:20.04"
