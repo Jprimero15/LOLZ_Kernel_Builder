@@ -30,7 +30,7 @@ tg_post_msg " <b>LOLZ KERNEL Compilation Started. </b>
 
 git clone https://Jprimero15:$GITHUB_TOKEN@github.com/Jprimero15/lolzbuilder -b gcc $LOLZ_DIR/builder 
 
-git clone https://github.com/Jprimero15/lolz_kernel_redmi8 -b v15_gcc --depth=1 $LOLZ_DIR/lolz
+git clone https://github.com/Jprimero15/lolz_kernel_redmi8 -b v20_gcc --depth=1 $LOLZ_DIR/lolz
 
 # for AOSP based Script
 cd $LOLZ_DIR/lolz && bash $LOLZ_DIR/builder/lolzbuilder.sh
