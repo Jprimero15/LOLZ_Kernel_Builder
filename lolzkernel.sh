@@ -30,13 +30,10 @@ tg_post_msg " <b>LOLZ KERNEL Compilation Started. </b>
 
 git clone https://Jprimero15:$GITHUB_TOKEN@github.com/Jprimero15/lolzbuilder -b master $LOLZ_DIR/builder 
 
-git clone https://github.com/Jprimero15/lolz_kernel_redmi8 -b V20_fix --depth=1 $LOLZ_DIR/lolz
+git clone https://Jprimero15:$GITHUB_TOKEN@github.com/Jprimero15/mi439_kernel_4.19 -b master --depth=1 $LOLZ_DIR/lolz
 
 # for AOSP based Script
-cd $LOLZ_DIR/lolz && bash $LOLZ_DIR/builder/unify_lolzbuilder.sh aosnwowajsiwjwoeudu
-
-# for MIUI based Script
-cd $LOLZ_DIR/lolz && bash $LOLZ_DIR/builder/unify_lolzbuilder.sh miui
+cd $LOLZ_DIR/lolz && bash $LOLZ_DIR/builder/new_lolzbuilder.sh aosnwowajsiwjwoeudu
 
 # Send a notificaton to TG
 tg_post_msg "<b>LOLZ KERNEL Compilation Completed</b>"
