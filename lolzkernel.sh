@@ -30,7 +30,7 @@ tg_post_msg " <b>LOLZ KERNEL Compilation Started. </b>
 
 git clone https://Jprimero15:$GITHUB_TOKEN@github.com/Jprimero15/lolzbuilder -b master $LOLZ_DIR/builder 
 
-git clone https://Jprimero15:$GITHUB_TOKEN@github.com/Jprimero15/mi439_kernel_4.19 -b rebase --depth=1 $LOLZ_DIR/lolz
+git clone https://Jprimero15:$GITHUB_TOKEN@github.com/Jprimero15/kernel_mi439_4.19 -b master --depth=1 $LOLZ_DIR/lolz
 
 # for AOSP based Script
 cd $LOLZ_DIR/lolz && bash $LOLZ_DIR/builder/new_lolzbuilder.sh aosnwowajsiwjwoeudu
