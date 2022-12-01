@@ -1,0 +1,26 @@
+name: LOLZ Builder
+
+on:
+  push:
+    branches:
+      - main
+
+  workflow_dispatch:
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    container:
+      image: jprimero15/archlinux-docker:latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: LOLZ Builder working
+      env:
+        GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+        TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
+        TG_CHATID: ${{ secrets.TG_CHATID }}
+      run: |
+        bash lolzkernel.sh
