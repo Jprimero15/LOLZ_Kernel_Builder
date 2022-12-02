@@ -12,7 +12,7 @@ steps:
         from_secret: tg_bot_token
       TG_CHATID: 
         from_secret: tg_chatid
-    image: "jprimero15/archlinux:latest"
+    image: "jprimero15/archlinux-docker:latest"
     name: LOLZ_Builder
     trigger: 
       branch: 
