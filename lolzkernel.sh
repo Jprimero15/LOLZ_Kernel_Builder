@@ -28,12 +28,12 @@ tg_post_msg " <b>LOLZ KERNEL Compilation Started. </b>
 
 <b>For more questions just message on this group and mention Jprimero15 (DO NOT DIRECT MESSAGE HIM)</b> "
 
-git clone https://Jprimero15:$GITHUB_TOKEN@github.com/Jprimero15/lolzbuilder -b master $LOLZ_DIR/builder 
-
 git clone https://Jprimero15:$GITHUB_TOKEN@github.com/Jprimero15/msm_ack_4.19 -b master --depth=1 $LOLZ_DIR/lolz
 
+git clone https://Jprimero15:$GITHUB_TOKEN@github.com/Jprimero15/lolzbuilder -b master $LOLZ_DIR/lolz/builder
+
 # for AOSP based Script
-cd $LOLZ_DIR/lolz && bash $LOLZ_DIR/builder/new_lolzbuilder.sh aosnwowajsiwjwoeudu
+cd $LOLZ_DIR/lolz && bash $LOLZ_DIR/lolz/builder/new_lolzbuilder.sh aosnwowajsiwjwoeudu
 
 # Send a notificaton to TG
 tg_post_msg "<b>LOLZ KERNEL Compilation Completed</b>"
