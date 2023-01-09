@@ -1,9 +1,9 @@
-name: LOLZ Builder 4.19
+name: LOLZ Builder k4.19
 
 on:
   push:
     branches:
-      - test2
+      - 4.19_public
 
   workflow_dispatch:
 
@@ -17,7 +17,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: LOLZ Builder 4.19 working
+    - name: LOLZ Builder k4.19 working
       env:
         GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
         TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
