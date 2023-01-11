@@ -20,25 +20,16 @@ function tg_post_msg() {
 }
 
 # Send a notificaton to TG
-tg_post_msg " <b>LOLZ KERNEL Compilation Started. </b>
-       
-<b>Some Informations about Build Types: </b>
-<b>BUILT-IN WLAN: <code>This is for Android 10,11 and 12 AOSP Based Custom ROMs, e.g. CrDroid.</code></b>
-<b>MODULE_WLAN: <code>This is for Android 10 MIUI Based ROMs and GSI. </code></b>
+tg_post_msg " <b>LOLZ KERNEL Compilation Started (4.9-stock).</b>"
 
-<b>For more questions just message on this group and mention Jprimero15 (DO NOT DIRECT MESSAGE HIM)</b> "
-
-git clone https://github.com/Jprimero15/lolz_kernel_redmi8 -b V21_test --depth=1 $LOLZ_DIR/lolz
+git clone https://github.com/Jprimero15/caf_kernel_mi439 -b topaz --depth=1 $LOLZ_DIR/lolz
 
 git clone https://Jprimero15:$GITHUB_TOKEN@github.com/Jprimero15/lolzbuilder -b master $LOLZ_DIR/lolz/builder
 
-# for AOSP based Script
-cd $LOLZ_DIR/lolz && bash $LOLZ_DIR/lolz/builder/unify_lolzbuilder.sh aosnwowajsiwjwoeudu
-
-# for MIUI based Script
-cd $LOLZ_DIR/lolz && bash $LOLZ_DIR/lolz/builder/unify_lolzbuilder.sh miui
+# 4.9 stock
+cd $LOLZ_DIR/lolz && bash $LOLZ_DIR/lolz/builder/stock_lolzbuilder.sh
 
 # Send a notificaton to TG
-tg_post_msg "<b>LOLZ KERNEL Compilation Completed</b>"
+tg_post_msg "<b>LOLZ KERNEL Compilation Completed (4.9-stock).</b>"
 
 # End of Script

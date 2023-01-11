@@ -1,9 +1,9 @@
-name: LOLZ Builder
+name: 4.9 kernel Builder
 
 on:
   push:
     branches:
-      - main
+      - 4.9-stock
 
   workflow_dispatch:
 
@@ -17,7 +17,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: LOLZ Builder working
+    - name: 4.9 kernel Builder working
       env:
         GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
         TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
