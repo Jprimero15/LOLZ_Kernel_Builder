@@ -22,9 +22,9 @@ function tg_post_msg() {
 # Send a notificaton to TG
 tg_post_msg " <b>LOLZ KERNEL Compilation Started (4.9-stock).</b>"
 
-git clone https://github.com/Jprimero15/caf_kernel_mi439 -b binder-next --depth=1 $LOLZ_DIR/lolz
+git clone https://github.com/Jprimero15/caf_kernel_mi439 -b topaz --depth=1 $LOLZ_DIR/lolz
 
-git clone https://Jprimero15:$GITHUB_TOKEN@github.com/Jprimero15/lolzbuilder -b topaz $LOLZ_DIR/lolz/builder
+git clone https://Jprimero15:$GITHUB_TOKEN@github.com/Jprimero15/lolzbuilder -b master $LOLZ_DIR/lolz/builder
 
 # 4.9 stock
 cd $LOLZ_DIR/lolz && bash $LOLZ_DIR/lolz/builder/stock_lolzbuilder.sh
