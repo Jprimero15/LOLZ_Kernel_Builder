@@ -16,7 +16,7 @@ jobs:
       image: jprimero15/archlinux-docker:latest
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
     - name: 4.9 kernel Builder working
       env:
         GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
