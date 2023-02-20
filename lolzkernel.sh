@@ -28,7 +28,7 @@ tg_post_msg " <b>LOLZ KERNEL Compilation Started. </b>
 
 <b>For more questions just message on this group and mention Jprimero15 (DO NOT DIRECT MESSAGE HIM)</b> "
 
-git clone https://Jprimero15:$GITHUB_TOKEN@github.com/Jprimero15/kernel_mi439_4.19 -b 9.6.4 --depth=1 $LOLZ_DIR/lolz
+git clone https://Jprimero15:$GITHUB_TOKEN@github.com/Jprimero15/msm_ack_4.19 -b master --depth=1 $LOLZ_DIR/lolz
 
 git clone https://Jprimero15:$GITHUB_TOKEN@github.com/Jprimero15/lolzbuilder -b master $LOLZ_DIR/lolz/builder
 
