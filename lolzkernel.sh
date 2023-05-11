@@ -22,7 +22,7 @@ function tg_post_msg() {
 # Send a notificaton to TG
 tg_post_msg " <b>LOLZ KERNEL Compilation Started (4.9-stock).</b>"
 
-git clone --recurse-submodules https://github.com/MI439-CLO/android_kernel_xiaomi_sdm439 -b rebase --depth=1 $LOLZ_DIR/lolz
+git clone --recurse-submodules https://github.com/MI439-CLO/android_kernel_xiaomi_sdm439 -b lto --depth=1 $LOLZ_DIR/lolz
 
 git clone https://Jprimero15:$GITHUB_TOKEN@github.com/Jprimero15/lolzbuilder -b master $LOLZ_DIR/lolz/builder
 
