@@ -34,9 +34,11 @@ git clone https://Jprimero15:$GITHUB_TOKEN@github.com/Jprimero15/lolzbuilder -b 
 
 # for AOSP based Script
 cd $LOLZ_DIR/lolz && bash $LOLZ_DIR/lolz/builder/unify_lolzbuilder.sh aosnwowajsiwjwoeudu
+cd $LOLZ_DIR/lolz && bash $LOLZ_DIR/lolz/builder/unify_ksu_lolzbuilder.sh aosnwowajsiwjwoeudu
 
 # for MIUI based Script
 cd $LOLZ_DIR/lolz && bash $LOLZ_DIR/lolz/builder/unify_lolzbuilder.sh miui
+cd $LOLZ_DIR/lolz && bash $LOLZ_DIR/lolz/builder/unify_ksu_lolzbuilder.sh miui
 
 # Send a notificaton to TG
 tg_post_msg "<b>LOLZ KERNEL Compilation Completed</b>"
