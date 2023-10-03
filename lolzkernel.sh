@@ -8,9 +8,9 @@ LOLZ_DIR="$(pwd)"
 
 # Github info
 git config --global user.name "Jprimero15"
-git config --global user.email "jprimero155@gmail.com"
+git config --global user.email "jprimero15@aospa.co"
 
-git clone https://github.com/Jprimero15/lolz_rebase -b v17 --depth=1 $LOLZ_DIR/lolz
+git clone https://github.com/Jprimero15/lolz_rebase -b v18 --depth=1 $LOLZ_DIR/lolz
 
 git clone https://github.com/Jprimero15/lolz-clang -b main --depth=1 $LOLZ_DIR/lolz/clang14
 
