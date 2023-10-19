@@ -9,14 +9,9 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
-    container:
-      image: jprimero15/archlinux-docker:latest
-
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
     - name: LOLZ Builder k4.19 working
       env:
         GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
