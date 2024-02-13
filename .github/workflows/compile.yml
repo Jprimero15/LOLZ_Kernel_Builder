@@ -9,20 +9,21 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
+     permissions:
+      contents: write
 
     container:
       image: jprimero15/archlinux-docker:latest
 
     steps:
-    - name: Check Out
+    - name: Check Out v3
       uses: actions/checkout@v3
       
     - name: Set Swap Space
-      uses: pierotofy/set-swap-space@master
+      uses: actionhippie/swap-space@v1
       with:
-        swap-size-gb: 24
+        size: 24G
         
     - name: mi439 kernel builder working
       env:
