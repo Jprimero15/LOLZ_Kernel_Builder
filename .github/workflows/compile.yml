@@ -15,9 +15,13 @@ jobs:
     container:
       image: jprimero15/archlinux-docker:latest
 
-    steps:
-    - uses: actions/checkout@v2
-    - name: LOLZ Builder k4.19 working
+    steps:    
+    - name: Set Swap Space
+      uses: pierotofy/set-swap-space@master
+      with:
+        swap-size-gb: 24
+        
+    - name: mi439 kernel builder working
       env:
         GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
         TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
