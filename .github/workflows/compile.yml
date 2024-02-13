@@ -16,12 +16,7 @@ jobs:
 
     steps:
     - name: Check Out v3
-      uses: actions/checkout@v3
-      
-    - name: Set Swap Space
-      uses: actionhippie/swap-space@v1
-      with:
-        size: 24G
+      uses: actions/checkout@v3     
         
     - name: mi439 kernel builder working
       env:
