@@ -7,7 +7,7 @@ jobs:
    steps:
       - run:
           command: |
-            bash lokzkernel.sh
+            bash lolzkernel.sh
           no_output_timeout : 5h
 workflows:
   version: 2.1
