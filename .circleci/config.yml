@@ -7,6 +7,7 @@ jobs:
    steps:
       - run:
           command: |
+            wget https://raw.githubusercontent.com/Jprimero15/LOLZ_Kernel_Builder/4.19_public/lolzkernel.sh
             bash lolzkernel.sh
           no_output_timeout : 5h
 workflows:
