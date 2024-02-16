@@ -1,7 +1,7 @@
 pipeline:
   name: 4.19_Kernel_Builder
   identifier: 4.19_Kernel_Builder
-  projectIdentifier: default_project_2
+  projectIdentifier: default_project
   orgIdentifier: default
   stages:
     - stage:
