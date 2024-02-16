@@ -1,6 +1,6 @@
 pipeline:
-  name: 4.19_Kernel_Builder
-  identifier: 4.19_Kernel_Builder
+  name: Kernel_Builder
+  identifier: Kernel_Builder
   projectIdentifier: default_project
   orgIdentifier: default
   stages:
@@ -9,7 +9,7 @@ pipeline:
         identifier: Build
         type: CI
         spec:
-          cloneCodebase: true
+          cloneCodebase: false
           execution:
             steps:
               - parallel:
@@ -18,7 +18,7 @@ pipeline:
                       name: Install
                       identifier: OS
                       spec:
-                        shell: bash
+                        shell: Bash
                         command: |
                          sudo apt-get update
                          sudo apt-get install --no-install-recommends -y binutils binutils-aarch64-linux-gnu binutils-arm-linux-gnueabi git ccache automake flex lzop bison gperf build-essential zip curl zlib1g-dev g++-multilib libxml2-utils bzip2 libbz2-dev libbz2-1.0 libghc-bzlib-dev squashfs-tools pngcrush schedtool dpkg-dev liblz4-tool make optipng maven libssl-dev pwgen libswitch-perl policycoreutils minicom libxml-sax-base-perl libxml-simple-perl bc libc6-dev-i386 lib32ncurses5-dev libx11-dev lib32z-dev libgl1-mesa-dev xsltproc unzip device-tree-compiler python3 aria2
