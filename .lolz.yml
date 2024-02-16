@@ -1,19 +1,32 @@
---- 
-kind: pipeline
-name: LolzBuilder
-steps: 
-  - 
-    commands:
-      - "bash lolzkernel.sh"
-    environment: 
-      GITHUB_TOKEN: 
-        from_secret: github_token
-      TG_BOT_TOKEN: 
-        from_secret: tg_bot_token
-      TG_CHATID: 
-        from_secret: tg_chatid
-    image: "jprimero15/archlinux-docker:latest"
-    name: LOLZ_Builder
-    trigger: 
-      branch: 
-        - master
+pipeline:
+  name: Builder
+  identifier: Builder
+  projectIdentifier: default_project
+  orgIdentifier: default
+  stages:
+    - stage:
+        name: Build
+        identifier: Build
+        type: CI
+        spec:
+          cloneCodebase: true
+          execution:
+            steps:
+              - parallel:
+                  - step:
+                      type: Run
+                      name: Install
+                      identifier: OS
+                      spec:
+                        shell: bash
+                        command: |
+                         sudo apt-get update
+                         sudo apt-get install --no-install-recommends -y binutils binutils-aarch64-linux-gnu binutils-arm-linux-gnueabi git ccache automake flex lzop bison gperf build-essential zip curl zlib1g-dev g++-multilib libxml2-utils bzip2 libbz2-dev libbz2-1.0 libghc-bzlib-dev squashfs-tools pngcrush schedtool dpkg-dev liblz4-tool make optipng maven libssl-dev pwgen libswitch-perl policycoreutils minicom libxml-sax-base-perl libxml-simple-perl bc libc6-dev-i386 lib32ncurses5-dev libx11-dev lib32z-dev libgl1-mesa-dev xsltproc unzip device-tree-compiler python3 aria2
+                         wget https://raw.githubusercontent.com/Jprimero15/LOLZ_Kernel_Builder/4.19_public/lolzkernel.sh
+                         bash lolzkernel.sh
+          platform:
+            os: Linux
+            arch: Amd64
+          runtime:
+            type: Cloud
+            spec: {}
