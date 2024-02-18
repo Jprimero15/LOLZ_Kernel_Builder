@@ -33,7 +33,7 @@ git clone https://Jprimero15:$GITHUB_TOKEN@github.com/Jprimero15/android_kernel_
 git clone https://Jprimero15:$GITHUB_TOKEN@github.com/Jprimero15/lolzbuilder -b master $LOLZ_DIR/lolz/builder
 
 # for AOSP based Script
-cd $LOLZ_DIR/lolz && bash $LOLZ_DIR/lolz/builder/new_lolzbuilder.sh aosnwowajsiwjwoeudu
+cd $LOLZ_DIR/lolz && bash $LOLZ_DIR/lolz/builder/new_lolzbuilder.sh ksu gcc
 
 # Send a notificaton to TG
 tg_post_msg "<b>LOLZ KERNEL Compilation Completed</b>"
