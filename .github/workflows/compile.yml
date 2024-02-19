@@ -9,13 +9,13 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     permissions:
       contents: write
     
     steps:
-    - name: Check Out v3
-      uses: actions/checkout@v3
+    - name: Check Out v4
+      uses: actions/checkout@v4
 
     - name: Configure builder
       shell: bash
