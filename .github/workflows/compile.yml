@@ -23,8 +23,8 @@ jobs:
     - name: Configure builder
       shell: bash
       run: |
-         echo "::group:: Installing archlinux gcc Packages"
-         pacman -S --noconfirm aarch64-linux-gnu-binutils arm-none-eabi-binutils
+         echo "::group:: Installing some archlinux Packages"
+         pacman -S --noconfirm aarch64-linux-gnu-binutils arm-none-eabi-binutils aarch64-linux-gnu-gcc neofetch
          gcc -v && ld -v && neofetch
          echo "::endgroup::"
 
