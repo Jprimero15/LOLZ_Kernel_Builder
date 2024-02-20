@@ -14,19 +14,11 @@ jobs:
       contents: write
 
     container:
-      image: panchajanya1999/archlinux:latest
+      image: /archlinux:latest
     
     steps:
     - name: Check Out v4
       uses: actions/checkout@v4
-
-    - name: Configure builder
-      shell: bash
-      run: |
-         echo "::group:: Installing some archlinux Packages"
-         pacman -S --noconfirm aarch64-linux-gnu-binutils arm-none-eabi-binutils aarch64-linux-gnu-gcc
-         gcc -v && ld -v
-         echo "::endgroup::"
         
     - name: mi439 4.19 kernel builder working
       env:
