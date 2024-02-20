@@ -15,6 +15,7 @@ jobs:
 
     container:
       image: panchajanya1999/archlinux:latest
+      options: --user root
     
     steps:
     - name: Check Out v4
@@ -24,8 +25,8 @@ jobs:
       shell: bash
       run: |
          echo "::group:: Installing some archlinux Packages"
-         pacman -S --noconfirm aarch64-linux-gnu-binutils arm-none-eabi-binutils aarch64-linux-gnu-gcc neofetch
-         gcc -v && ld -v && neofetch
+         pacman -S --noconfirm aarch64-linux-gnu-binutils arm-none-eabi-binutils aarch64-linux-gnu-gcc
+         gcc -v && ld -v
          echo "::endgroup::"
 
          echo "::group:: Setting Up Swap"
@@ -38,7 +39,7 @@ jobs:
          sudo swapon $SWAP_FILE
          echo "::endgroup::"
         
-    - name: mi439 kernel builder working
+    - name: mi439 4.19 kernel builder working
       env:
         GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
         TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
