@@ -12,6 +12,9 @@ jobs:
     runs-on: ubuntu-22.04
     permissions:
       contents: write
+
+    container:
+      image: panchajanya1999/archlinux:latest
     
     steps:
     - name: Check Out v4
@@ -20,12 +23,9 @@ jobs:
     - name: Configure builder
       shell: bash
       run: |
-
-         echo "::group:: Installing Building Depend Packages"
-         sudo apt-get update
-         sudo apt-get install --no-install-recommends -y libelf-dev libncurses-dev binutils-dev binutils binutils-aarch64-linux-gnu binutils-arm-linux-gnueabi git ccache automake flex lzop bison gperf build-essential zip curl g++-multilib liblz4-tool make libssl-dev policycoreutils bc unzip device-tree-compiler python3 aria2      
-         sudo find /usr/ -name *bfd*
-         gcc -v && ld -v
+         echo "::group:: Installing archlinux gcc Packages"
+         pacman -S --noconfirm aarch64-linux-gnu-binutils arm-none-eabi-binutils
+         gcc -v && ld -v && neofetch
          echo "::endgroup::"
 
          echo "::group:: Setting Up Swap"
