@@ -8,7 +8,7 @@ LOLZ_DIR="$(pwd)"
 
 # Github info
 git config --global user.name "Jprimero15"
-git config --global user.email "jprimero155@gmail.com"
+git config --global user.email "jprimero15@aospa.co"
 
 # Inlined function to post a message
 export BOT_MSG_URL="https://api.telegram.org/bot$TG_BOT_TOKEN/sendMessage"
@@ -28,17 +28,12 @@ tg_post_msg " <b>LOLZ KERNEL Compilation Started. </b>
 
 <b>For more questions just message on this group and mention Jprimero15 (DO NOT DIRECT MESSAGE HIM)</b> "
 
-git clone https://github.com/Jprimero15/lolz_kernel_redmi8 -b V24_test --depth=1 $LOLZ_DIR/lolz
+git clone https://Jprimero15:$GITHUB_TOKEN@github.com/Jprimero15/android_kernel_xiaomi_sdm439-4.19 -b lolz-v2 --depth=1 $LOLZ_DIR/lolz
 
 git clone https://Jprimero15:$GITHUB_TOKEN@github.com/Jprimero15/lolzbuilder -b master $LOLZ_DIR/lolz/builder
 
 # for AOSP based Script
-#cd $LOLZ_DIR/lolz && bash $LOLZ_DIR/lolz/builder/unify_lolzbuilder.sh aosnwowajsiwjwoeudu
-cd $LOLZ_DIR/lolz && bash $LOLZ_DIR/lolz/builder/unify_ksu_lolzbuilder.sh aosnwowajsiwjwoeudu
-
-# for MIUI based Script
-#cd $LOLZ_DIR/lolz && bash $LOLZ_DIR/lolz/builder/unify_lolzbuilder.sh miui
-cd $LOLZ_DIR/lolz && bash $LOLZ_DIR/lolz/builder/unify_ksu_lolzbuilder.sh miui
+cd $LOLZ_DIR/lolz && bash $LOLZ_DIR/lolz/builder/new_lolzbuilder.sh ksu clangthinlto
 
 # Send a notificaton to TG
 tg_post_msg "<b>LOLZ KERNEL Compilation Completed</b>"
