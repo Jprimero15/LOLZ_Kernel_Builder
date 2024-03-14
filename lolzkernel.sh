@@ -28,12 +28,12 @@ tg_post_msg " <b>LOLZ KERNEL Compilation Started. </b>
 
 <b>For more questions just message on this group and mention Jprimero15 (DO NOT DIRECT MESSAGE HIM)</b> "
 
-git clone https://Jprimero15:$GITHUB_TOKEN@github.com/Jprimero15/android_kernel_xiaomi_sdm439-4.19 -b lolz-v2 --depth=1 $LOLZ_DIR/lolz
+git clone https://Jprimero15:$GITHUB_TOKEN@github.com/Jprimero15/android_kernel_xiaomi_sdm439-4.19 -b udc1 --depth=1 $LOLZ_DIR/lolz
 
 git clone https://Jprimero15:$GITHUB_TOKEN@github.com/Jprimero15/lolzbuilder -b master $LOLZ_DIR/lolz/builder
 
 # for AOSP based Script
-cd $LOLZ_DIR/lolz && bash $LOLZ_DIR/lolz/builder/new_lolzbuilder.sh ksu gcclto
+cd $LOLZ_DIR/lolz && bash $LOLZ_DIR/lolz/builder/new_lolzbuilder.sh clanglto
 
 # Send a notificaton to TG
 tg_post_msg "<b>LOLZ KERNEL Compilation Completed</b>"
