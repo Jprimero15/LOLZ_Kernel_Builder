@@ -3,7 +3,7 @@ name: LOLZ Builder
 on:
   push:
     branches:
-      - main
+      - test
 
   workflow_dispatch:
 
