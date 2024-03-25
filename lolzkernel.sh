@@ -28,13 +28,13 @@ tg_post_msg " <b>LOLZ KERNEL Compilation Started. </b>
 
 <b>For more questions just message on this group and mention Jprimero15 (DO NOT DIRECT MESSAGE HIM)</b> "
 
-git clone https://github.com/Jprimero15/lolz_kernel_redmi8 -b v26 --depth=1 $LOLZ_DIR/lolz
+git clone https://github.com/Jprimero15/lolz_kernel_redmi8 -b v26-binder --depth=1 $LOLZ_DIR/lolz
 
 git clone https://Jprimero15:$GITHUB_TOKEN@github.com/Jprimero15/lolzbuilder -b master $LOLZ_DIR/lolz/builder
 
 # for AOSP based Script
 cd $LOLZ_DIR/lolz
-bash $LOLZ_DIR/lolz/builder/current_lolzbuilder.sh ksu test archgcc
+bash $LOLZ_DIR/lolz/builder/current_lolzbuilder.sh ksu test archgcc gcclto
 #bash $LOLZ_DIR/lolz/builder/current_lolzbuilder.sh clanglto
 
 
