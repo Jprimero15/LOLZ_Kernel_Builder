@@ -34,7 +34,7 @@ git clone https://Jprimero15:$GITHUB_TOKEN@github.com/Jprimero15/lolzbuilder -b 
 
 # for AOSP based Script
 cd $LOLZ_DIR/lolz
-bash $LOLZ_DIR/lolz/builder/current_lolzbuilder.sh ksu test archgcc
+bash $LOLZ_DIR/lolz/builder/current_lolzbuilder.sh ksu test clanglto
 #bash $LOLZ_DIR/lolz/builder/current_lolzbuilder.sh clanglto
 
 
