@@ -12,10 +12,10 @@ git config --global user.email "jprimero15@aospa.co"
 
 git clone https://github.com/Jprimero15/lolz_rebase -b v18-next --depth=1 $LOLZ_DIR/lolz
 
-git clone https://github.com/Dhruvgera/EvaGCC-arm -b master --depth=1 $LOLZ_DIR/lolz/gcc10
+git clone https://github.com/curbthepain/linaro-arm-eabi-4.9 -b master --depth=1 $LOLZ_DIR/lolz/gcc
 
 # note 3 based Script
-cd $LOLZ_DIR/lolz && bash builder.sh --gcc
+cd $LOLZ_DIR/lolz && bash builder.sh
 
 #cd $LOLZ_DIR/lolz && bash builder.sh hltechn
 
