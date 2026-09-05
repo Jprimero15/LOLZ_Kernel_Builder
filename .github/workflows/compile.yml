@@ -12,19 +12,20 @@ jobs:
     runs-on: ubuntu-24.04
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
 
       - name: Install dependencies
+        env:
+          DEBIAN_FRONTEND: noninteractive
         run: |
-          export DEBIAN_FRONTEND=noninteractive
-          apt-get update
-          apt-get install -y \
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
             build-essential \
             binutils \
             bc \
             bison \
             flex \
-            git \
             cpio \
             curl \
             rsync \
@@ -38,4 +39,5 @@ jobs:
           TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
           TG_CHATID: ${{ secrets.TG_CHATID }}
         run: |
+          chmod +x lolzkernel.sh
           bash lolzkernel.sh
