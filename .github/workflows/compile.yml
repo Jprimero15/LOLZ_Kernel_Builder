@@ -1,4 +1,4 @@
-name: LOLZ HLTE Builder
+name: LOLZ Builder
 
 on:
   push:
@@ -9,18 +9,35 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     container:
-      image: jprimero15/archlinux-docker:latest
+      image: ubuntu:20.04
 
     steps:
-    - uses: actions/checkout@v3
-    - name: LOLZ HLTE Builder working
-      env:
-        GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-        TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
-        TG_CHATID: ${{ secrets.TG_CHATID }}
-      run: |
-        bash lolzkernel.sh
+      - uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: |
+          export DEBIAN_FRONTEND=noninteractive
+          apt-get update
+          apt-get install -y \
+            build-essential \
+            binutils \
+            bc \
+            bison \
+            flex \
+            git \
+            cpio \
+            rsync \
+            python3 \
+            libssl-dev \
+            libelf-dev
+
+      - name: LOLZ Builder working
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
+          TG_CHATID: ${{ secrets.TG_CHATID }}
+        run: |
+          bash lolzkernel.sh
