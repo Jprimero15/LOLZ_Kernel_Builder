@@ -17,7 +17,7 @@ git clone https://github.com/Jprimero15/lolz_rebase -b v18-next --depth=1 $LOLZD
 git clone https://github.com/H33CKER/clang -b main --depth=1 $LOLZDIR/clang_tc
 
 rm -rf $LOLZDIR/KernelSU # always remove
-git clone https://github.com/backslashxx/KernelSU -b master $LOLZDIR/KernelSU
+git clone https://github.com/backslashxx/KernelSU -b v3.3.0-18 $LOLZDIR/KernelSU
 
 # note 3 based Script
 cd $LOLZDIR && bash builder.sh
