@@ -14,7 +14,7 @@ git config --global user.email "jprimero15@aospa.co"
 
 git clone https://github.com/Jprimero15/lolz_rebase -b v18-next --depth=1 $LOLZDIR
 
-git clone https://github.com/H33CKER/clang -b main --depth=1 $LOLZDIR/clang_tc
+curl -L https://github.com/ZyCromerZ/Clang/releases/download/14.0.6-20250704-release/Clang-14.0.6-20250704.tar.gz | tar -xz -C $LOLZDIR/clang_tc
 
 rm -rf $LOLZDIR/KernelSU # always remove
 git clone https://github.com/backslashxx/KernelSU -b v3.3.0-18 $LOLZDIR/KernelSU
