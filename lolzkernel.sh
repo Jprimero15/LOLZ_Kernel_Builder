@@ -10,9 +10,11 @@ LOLZDIR="$(pwd)/lolz"
 git config --global user.name "Jprimero15"
 git config --global user.email "jprimero15@aospa.co"
 
+
+
 git clone https://github.com/Jprimero15/lolz_rebase -b v18-next --depth=1 $LOLZDIR
 
-git clone https://github.com/H33CKER/clang -b main --depth=1 $LOLZDIR/gcc_tc
+git clone https://github.com/H33CKER/clang -b main --depth=1 $LOLZDIR/clang_tc
 
 rm -rf $LOLZDIR/KernelSU # always remove
 git clone https://github.com/backslashxx/KernelSU -b master $LOLZDIR/KernelSU
