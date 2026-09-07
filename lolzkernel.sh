@@ -14,10 +14,8 @@ git config --global user.email "jprimero15@aospa.co"
 
 git clone https://github.com/Jprimero15/lolz_rebase -b v18-next --depth=1 $LOLZDIR
 
-git clone https://github.com/ThankYouMario/proprietary_vendor_qcom_sdclang -b 19 --depth=1 $LOLZDIR/clang_tc 
-
 rm -rf $LOLZDIR/KernelSU # always remove
-git clone https://github.com/backslashxx/KernelSU -b v3.3.0-18 $LOLZDIR/KernelSU
+git clone https://github.com/backslashxx/KernelSU -b master $LOLZDIR/KernelSU
 
 # note 3 based Script
 cd $LOLZDIR && bash builder.sh
