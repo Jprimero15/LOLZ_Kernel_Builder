@@ -17,9 +17,6 @@ git clone https://github.com/Jprimero15/lolz_rebase -b v18-next --depth=1 $LOLZD
 rm -rf $LOLZDIR/KernelSU # always remove
 git clone https://github.com/backslashxx/KernelSU -b master $LOLZDIR/KernelSU
 
-# kernel: Fix kallsyms symbol size type mismatch
-git -C $LOLZDIR/KernelSU fetch https://github.com/Jprimero15/KernelSU.git master && git -C $LOLZDIR/KernelSU cherry-pick 713cfc61af2c0ee00da504d209e559bbee03c5db
-
 # note 3 based Script
 cd $LOLZDIR && bash builder.sh
 
